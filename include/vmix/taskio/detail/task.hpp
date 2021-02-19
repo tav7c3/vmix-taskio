@@ -12,6 +12,7 @@ class task {
   std::string description;
   std::string time;
   bool completed;
+  bool important;
 };
 
 }  // namespace vmix::taskio::detail

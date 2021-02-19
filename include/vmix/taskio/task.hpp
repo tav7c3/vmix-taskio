@@ -43,6 +43,9 @@ class VMIX_TASKIO_EXPORT task final {
   bool completed() const noexcept;
   void completed(bool) noexcept;
 
+  bool important() const noexcept;
+  void important(bool) noexcept;
+
  private:
   // task_service знает структуру в хранилище
   friend class task_service;
