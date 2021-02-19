@@ -2,6 +2,7 @@
   "name": "vmix-taskio",
   "version-string": "1.0.0",
   "dependencies": [
-    "catch2"
+    "catch2",
+    "sqlite-orm"
   ]
 }

@@ -49,10 +49,17 @@ generate_export_header(vmix_taskio
 target_sources(vmix_taskio
     PRIVATE
         src/detail/in_memory_task_storage.cpp
+        src/detail/sqlite_task_storage.cpp
         src/main.cpp
         src/task.cpp
         src/task_service.cpp
         src/task_storage.cpp
+)
+
+find_package(SqliteOrm CONFIG REQUIRED)
+target_link_libraries(vmix_taskio
+    PRIVATE
+        sqlite_orm::sqlite_orm
 )
 
 if(BUILD_TESTING)

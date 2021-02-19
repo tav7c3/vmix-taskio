@@ -3,12 +3,7 @@
 
 #include "tools.hpp"
 
-TEST_CASE("vmix/taskio/task_service/in_memory") {
-  using vmix::taskio::task_service;
-  using vmix::taskio::task_storage_registry;
-
-  task_service service(task_storage_registry::instance().make_storage("mem"));
-
+void check(vmix::taskio::task_service& service) {
   vmix::taskio::task task;
 
   CHECK_NOTHROW(task = service.create());
@@ -30,4 +25,23 @@ TEST_CASE("vmix/taskio/task_service/in_memory") {
 
   all = service.all();
   CHECK(all.empty());
+}
+
+TEST_CASE("vmix/taskio/task_service/in_memory") {
+  using vmix::taskio::task_service;
+  using vmix::taskio::task_storage_registry;
+
+  task_service service(task_storage_registry::instance().make_storage("mem"));
+
+  check(service);
+}
+
+TEST_CASE("vmix/taskio/task_service/sqlite") {
+  using vmix::taskio::task_service;
+  using vmix::taskio::task_storage_registry;
+
+  task_service service(
+      task_storage_registry::instance().make_storage("sqlite"));
+
+  check(service);
 }
