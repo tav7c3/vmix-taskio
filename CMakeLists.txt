@@ -48,8 +48,11 @@ generate_export_header(vmix_taskio
 
 target_sources(vmix_taskio
     PRIVATE
+        src/detail/in_memory_task_storage.cpp
         src/main.cpp
         src/task.cpp
+        src/task_service.cpp
+        src/task_storage.cpp
 )
 
 if(BUILD_TESTING)
