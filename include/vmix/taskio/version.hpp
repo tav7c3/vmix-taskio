@@ -4,7 +4,7 @@
 #include <vmix/taskio/export.hpp>
 
 #define VMIX_TASKIO_VERSION_MAJOR 1
-#define VMIX_TASKIO_VERSION_MINOR 0
+#define VMIX_TASKIO_VERSION_MINOR 1
 #define VMIX_TASKIO_VERSION_MICRO 0
 
 namespace vmix::taskio {

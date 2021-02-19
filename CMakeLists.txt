@@ -10,7 +10,7 @@ if (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
 endif()
 
 project(vmix_taskio_proj
-    VERSION 1.0.0
+    VERSION 1.1.0
     LANGUAGES CXX
 )
 
