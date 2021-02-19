@@ -70,4 +70,12 @@ void task::completed(bool completed) noexcept {
   impl_->completed = completed;
 }
 
+bool task::important() const noexcept {
+  return impl_->important;
+}
+
+void task::important(bool important) noexcept {
+  impl_->important = important;
+}
+
 }  // namespace vmix::taskio

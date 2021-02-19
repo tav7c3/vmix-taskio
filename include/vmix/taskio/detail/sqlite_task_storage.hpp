@@ -30,6 +30,8 @@ using dtask_ptr = std::unique_ptr<dtask>;
           sqlite_orm::make_column("time", &dtask::time,               \
                                   sqlite_orm::default_value("")),     \
           sqlite_orm::make_column("completed", &dtask::completed,     \
+                                  sqlite_orm::default_value(false)),  \
+          sqlite_orm::make_column("important", &dtask::important,     \
                                   sqlite_orm::default_value(false))))
 
 using db_t = decltype(VMIX_TASKIO_DETAIL_SQLITE_DB_SCHEMA);
