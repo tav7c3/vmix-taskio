@@ -1,5 +1,14 @@
 cmake_minimum_required(VERSION 3.15...3.16)
 
+#
+## vcpkg
+if (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+    set(CMAKE_TOOLCHAIN_FILE
+        ${CMAKE_CURRENT_SOURCE_DIR}/tools/vcpkg/scripts/buildsystems/vcpkg.cmake
+        CACHE STRING "vcpkg toolchain file"
+    )
+endif()
+
 project(vmix_taskio_proj
     VERSION 1.0.0
     LANGUAGES CXX

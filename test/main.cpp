@@ -1,3 +1,3 @@
-#include <vmix/taskio.hpp>
+#define CATCH_CONFIG_MAIN
 
-int main(int argc, char *argv[]) {}
+#include <catch2/catch.hpp>
