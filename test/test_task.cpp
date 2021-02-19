@@ -110,3 +110,17 @@ TEST_CASE("vmix/taskio/task/completed") {
     CHECK(!task.completed());
   }
 }
+
+TEST_CASE("vmix/taskio/task/important") {
+  vmix::taskio::task task;
+
+  SECTION("default") { CHECK(!task.important()); }
+
+  SECTION("change") {
+    task.important(true);
+    CHECK(task.important());
+
+    task.important(false);
+    CHECK(!task.important());
+  }
+}

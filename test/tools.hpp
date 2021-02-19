@@ -7,6 +7,7 @@ inline void fill(vmix::taskio::task& task) {
   task.description("new task description");
   task.time("321");
   task.completed(true);
+  task.important(true);
 };
 
 inline void check_equal(const vmix::taskio::task& first,
@@ -16,4 +17,5 @@ inline void check_equal(const vmix::taskio::task& first,
   CHECK(first.description() == second.description());
   CHECK(first.time() == second.time());
   CHECK(first.completed() == second.completed());
+  CHECK(first.important() == second.important());
 };
