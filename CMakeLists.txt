@@ -49,6 +49,7 @@ generate_export_header(vmix_taskio
 target_sources(vmix_taskio
     PRIVATE
         src/main.cpp
+        src/task.cpp
 )
 
 if(BUILD_TESTING)

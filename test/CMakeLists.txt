@@ -21,6 +21,7 @@ target_sources(test_vmix_taskio
     PRIVATE
         main.cpp
         test_version.cpp
+        test_task.cpp
 )
 
 add_test(NAME test-v-mix-taskmgr
